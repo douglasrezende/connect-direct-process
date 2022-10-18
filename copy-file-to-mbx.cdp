@@ -1,0 +1,15 @@
+COPY2MB PROCESS SNODE=CDSAB2BDESTINY
+SNODEID=(admin)
+step01 COPY
+  FROM (
+    FILE=/DOUGLAS_REZENDE/LOG/TEST.log
+    PNODE
+  )
+
+  TO (
+    FILE=/mailbox/DOUGLAS_MAILBOX/TEST.txt
+    SNODE
+    DISP=rpl
+  )
+
+PEND;
